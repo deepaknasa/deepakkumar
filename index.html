@@ -134,35 +134,7 @@
 				<!-- Certifications -->
 				<div class="ta-left col-12 pl-3 pl-sm-5 right-panel-section">
 					<span class="f2 main-heading transform-upper letter-spacing">Certifications</span>
-					<div class="work-ex-items pl-4">
-						<div class="work-ex-item">
-							<span class="timeline-bubble secondary-text">
-								<i class="fa fa-circle d-inline"></i>
-							</span>
-							<div class="work-ex-heading">
-								<span class="f2 d-block">IKM Assessment | 87 / 100</span>
-								<span class="f3 d-block font-italic text-muted"><strong>C#/SQL Server</strong></span>
-							</div>
-						</div>
-						<div class="work-ex-item">
-							<span class="timeline-bubble secondary-text">
-								<i class="fa fa-circle d-inline"></i>
-							</span>
-							<div class="work-ex-heading">
-								<span class="f2 d-block">IKM Assessment | 85 / 100</span>
-								<span class="f3 d-block font-italic text-muted"><strong>HTML/CSS/JS</strong></span>
-							</div>
-						</div>
-						<div class="work-ex-item">
-							<span class="timeline-bubble secondary-text">
-								<i class="fa fa-circle d-inline"></i>
-							</span>
-							<div class="work-ex-heading">
-								<span class="f2 d-block">Microsoft Certification | MCSD</span>
-								<span class="f3 d-block font-italic text-muted"><strong>ASP.Net MVC</strong></span>
-							</div>
-						</div>
-					</div>
+					<div class="work-ex-items pl-4 certificatesTemplate"></div>
 				</div>
 			</div>
 		</div>
@@ -194,12 +166,15 @@
 		</div>
 		{%/each%}
 	</script>
-	<script type="text/x-jquery-tmpl" id="hobbiesTmpl">
-		{%each(i,h) hobbies%}
-		<div class="col-4 pb-2">
-			<div class="hobby-icon">
-				<i class="fa ${h.icon}"></i>
-				<span class="f3">${h.name}</span>
+	<script type="text/x-jquery-tmpl" id="certificatesTmpl">
+		{%each(i,c) certificates%}
+		<div class="work-ex-item">
+			<span class="timeline-bubble secondary-text">
+				<i class="fa fa-circle d-inline"></i>
+			</span>
+			<div class="work-ex-heading">
+				<span class="f2 d-block">${c.name}</span>
+				<span class="f3 d-block font-italic text-muted"><strong>${c.desc}</strong></span>
 			</div>
 		</div>
 		{%/each%}

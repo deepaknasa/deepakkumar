@@ -64,8 +64,21 @@ var data = {
 	{
 		icon: "fa-film",
 		name: "Movies"
+	}],
+	certificates: [{
+		name: "IKM Assessment | 87 / 100",
+		desc: "C#/SQL Server"
+	},
+	{
+		name: "IKM Assessment | 85 / 100",
+		desc: "HTML/CSS/JS"
+	},
+	{
+		name: "Microsoft Certification | MCSD",
+		desc: "ASP.Net MVC"
 	}]
 };
 
 $('#skillTmpl').tmpl(data).appendTo('.skillTemplate');
 $('#hobbiesTmpl').tmpl(data).appendTo('.hobbyTemplate');
+$('#certificatesTmpl').tmpl(data).appendTo('.certificatesTemplate');
