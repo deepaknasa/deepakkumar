@@ -1,0 +1,246 @@
+﻿body {
+    max-width: 786px;
+    background-color: #caccd1;
+    box-shadow: -30px 30px 70px #414142;
+    margin-bottom: 2em;
+    font-size: 16px !important;
+    font-family: 'Roboto', sans-serif;
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .f1 {
+        font-size: 1.7em !important;
+    }
+
+    .f2 {
+        font-size: 1em !important;
+        font-weight: 600;
+    }
+
+    .f3 {
+        font-size: 0.8em !important;
+    }
+
+    .f4 {
+        font-size: 0.7em !important;
+    }
+
+    .heading-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .fl-right {
+        float: right;
+    }
+
+    .transform-upper {
+        text-transform: uppercase;
+    }
+
+    .letter-spacing {
+        letter-spacing: 0.3em;
+    }
+
+    .secondary-text {
+        color: #a7acb7;
+    }
+
+    .ta-left {
+        text-align: left;
+    }
+
+    .ta-center {
+        text-align: center;
+    }
+
+    .ta-justify {
+        text-align: justify;
+    }
+
+    nav.navbar {
+        background-color: #383a3d;
+
+        .navbar-container {
+            font: sans-serif;
+            text-align: center;
+            color: white;
+
+            .navbar-brand {
+                background-color: #383a3d;
+            }
+
+            .navbar-brand-title {
+                border-color: #a7acb7 !important;
+
+                .brand-title-primary {
+                    /*font-size: 1.8em;*/
+                    display: block;
+                    line-height: 1.2em;
+                }
+
+                .brand-title-secondary {
+                    line-height: 1.2em;
+                }
+            }
+        }
+    }
+
+    .bg-color1 {
+        background-color: #b7b7b7 !important;
+
+        .left-panel-section {
+            padding-bottom: 25px;
+
+            .intro-tab-content {
+                margin: 0;
+            }
+
+            .main-heading {
+                padding-bottom: 15px;
+                display: block;
+                font-weight: 700;
+            }
+
+            .resume-icon {
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 20%;
+                height: 3em;
+                width: 3em;
+                padding: 0;
+
+                i {
+                    padding-top: 5px;
+                }
+
+                span {
+                    display: block;
+                    position: relative;
+                    top: -3px;
+                }
+            }
+        }
+
+        .social-tab {
+            a {
+                color: black;
+
+                .border-icon {
+                    border: 1px solid black;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 30px;
+                    text-align: center;
+                    padding-top: 7px;
+                }
+            }
+        }
+
+        .hobby-icon {
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 100%;
+            height: 3.5em;
+            width: 3.5em;
+            padding: 0;
+
+            i {
+                padding-top: 5px;
+                /*font-size: 1.10em;*/
+            }
+
+            span {
+                /*font-size: 0.55em;*/
+                display: block;
+                position: relative;
+                top: -3px;
+            }
+        }
+
+        .work-skills {
+            ul.skill-dots {
+                font-size: 0.8em;
+                padding-top: 3px;
+
+                li {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    .work-ex {
+        background-color: #e8e1e1 !important;
+
+        .right-panel-section {
+            padding-bottom: 25px;
+
+            .work-ex-items {
+                border-left: 2px solid #d6cfcf;
+
+                .work-ex-item {
+                    position: relative;
+                    top: -1.8em;
+
+                    .timeline-bubble {
+                        position: relative;
+                        left: -1.8rem !important;
+                        top: 1.1rem !important;
+                        font-size: 0.5em !important;
+                    }
+
+                    .work-ex-heading {
+                        line-height: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    body {
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+
+    .f1 {
+        font-size: 1.3em !important;
+    }
+
+    .f2 {
+        font-size: 0.9em !important;
+        font-weight: 600;
+    }
+
+    .f3 {
+        font-size: 0.9em !important;
+    }
+
+    .f4 {
+        font-size: 0.8em !important;
+    }
+
+    .heading-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-name {
+        text-align: left;
+    }
+
+    .skill-level {
+        padding-left: 0;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+    body {
+        margin-bottom: 0;
+    }
+}
