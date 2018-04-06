@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace deepakkumar.tech
 {
@@ -38,6 +40,17 @@ namespace deepakkumar.tech
             }
 
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "app")),
+                RequestPath = "/app"
+            });
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+                RequestPath = "/node_modules"
+            });
 
             app.UseMvc(routes =>
             {
