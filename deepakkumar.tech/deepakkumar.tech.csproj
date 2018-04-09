@@ -29,7 +29,6 @@
     <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\bootstrap.min.css" />
     <None Include="wwwroot\content\css\fonts\fontawesome-webfont.eot" />
     <None Include="wwwroot\content\css\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\content\css\fonts\fontawesome-webfont.ttf" />
