@@ -2,6 +2,6 @@
 
 @Component({
     selector: 'profile-header',
-    templateUrl: './header.component.tmpl.html'
+    templateUrl: 'header.component.html'
 })
 export class HeaderComponent { }

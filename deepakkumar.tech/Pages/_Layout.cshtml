@@ -5,6 +5,7 @@
         var hostUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
         var cssPath = "/app/content";
     }
+    <base href="/"/>
     <meta charset="utf-8">
     <title>www.deepakkumar.tech</title>
     <link rel="icon" href="@hostUrl/fav/favicon.ico?v=1" type="image/x-icon">
@@ -24,8 +25,8 @@
 
     @RenderBody()
     <script type="text/javascript" src="node_modules/core-js/client/shim.min.js"></script>
+    @*
     <script type="text/javascript" src="@jsPath/vendor/jquery-slim.min.js"></script>
-    <script type="text/javascript" src="@jsPath/vendor/jquery.tmpl.js"></script>
     <script type="text/javascript" src="@jsPath/vendor/popper.min.js"></script>
     <script type="text/javascript" src="@jsPath/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/zone.js/dist/zone.js"></script>
@@ -35,7 +36,8 @@
     <script>
         System.import('/app/main.js').catch(function (err) { console.error(err); });
     </script>
-    <script type="text/javascript" src="@jsPath/dynamicData.js"></script>
+    <script type="text/javascript" src="@jsPath/dynamicData.js"></script>*@
+    <script type="text/javascript" src="~/app.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

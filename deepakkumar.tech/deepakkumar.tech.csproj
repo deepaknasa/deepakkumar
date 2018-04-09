@@ -4,19 +4,26 @@
     <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="app\controllers\HomeCtrl.ts" />
+    <Compile Remove="app\controllers\**" />
+    <Content Remove="app\controllers\**" />
+    <EmbeddedResource Remove="app\controllers\**" />
+    <None Remove="app\controllers\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DocumentDBRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB" Version="1.21.1" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\header.component.ts" />
-    <TypeScriptCompile Include="app\controllers\HomeCtrl.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dist\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 </Project>

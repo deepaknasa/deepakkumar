@@ -140,7 +140,7 @@ var MasterComponent = /** @class */ (function () {
     MasterComponent = __decorate([
         core_1.Component({
             selector: 'profile',
-            templateUrl: "./master.component.tmpl.html",
+            templateUrl: "master.component.html",
         })
     ], MasterComponent);
     return MasterComponent;
