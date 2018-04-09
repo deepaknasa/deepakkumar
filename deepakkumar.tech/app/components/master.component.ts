@@ -22,7 +22,7 @@ interface WorkExp {
 
 @Component({
     selector: 'profile',
-    templateUrl: `master.component.html`,
+    template: require(`./master.component.html`),
 })
 export class MasterComponent {
     skills: any[] = [{

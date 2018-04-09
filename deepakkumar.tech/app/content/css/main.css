@@ -6,7 +6,7 @@
   font-size: 16px !important;
   font-family: 'Roboto', sans-serif; }
   body #primaryImg {
-    content: url(/app/content/img/profile2.jpg); }
+    content: url(/content/img/profile2.jpg); }
   body a {
     text-decoration: none !important; }
   body .f1 {

@@ -13,7 +13,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'profile-header',
-            templateUrl: 'header.component.html'
+            template: require('./header.component.html')
         })
     ], HeaderComponent);
     return HeaderComponent;

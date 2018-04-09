@@ -2,6 +2,6 @@
 
 @Component({
     selector: 'profile-header',
-    templateUrl: 'header.component.html'
+    template: require('./header.component.html')
 })
 export class HeaderComponent { }

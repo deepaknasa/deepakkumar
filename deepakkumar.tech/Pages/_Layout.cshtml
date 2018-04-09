@@ -3,7 +3,6 @@
 <head>
     @{
         var hostUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
-        var cssPath = "/app/content";
     }
     <base href="/"/>
     <meta charset="utf-8">
@@ -12,31 +11,11 @@
     <link rel="shortcut icon" href="@hostUrl/fav/favicon.ico?v=1" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="@cssPath/css/bootstrap.min.css">
-    <link rel="stylesheet" href="@cssPath/css/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="@cssPath/css/main.min.css">
+    <link rel="stylesheet" href="~/content/css/vendor/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 </head>
 <body class="mx-auto">
-    @{
-        var basePath = "/app";
-        var jsPath = $"{basePath}/custom";
-    }
-
     @RenderBody()
-    <script type="text/javascript" src="node_modules/core-js/client/shim.min.js"></script>
-    @*
-    <script type="text/javascript" src="@jsPath/vendor/jquery-slim.min.js"></script>
-    <script type="text/javascript" src="@jsPath/vendor/popper.min.js"></script>
-    <script type="text/javascript" src="@jsPath/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="node_modules/zone.js/dist/zone.js"></script>
-    <script type="text/javascript" src="node_modules/systemjs/dist/system.src.js"></script>
-
-    <script type="text/javascript" src="@basePath/systemjs.config.js"></script>
-    <script>
-        System.import('/app/main.js').catch(function (err) { console.error(err); });
-    </script>
-    <script type="text/javascript" src="@jsPath/dynamicData.js"></script>*@
     <script type="text/javascript" src="~/app.js"></script>
     @RenderSection("Scripts", required: false)
 </body>

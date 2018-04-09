@@ -13,6 +13,10 @@
     <Compile Remove="DocumentDBRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="app\polyfills.ts" />
+    <None Remove="app\styles.ts" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Microsoft.Azure.DocumentDB" Version="1.21.1" />
   </ItemGroup>
@@ -21,9 +25,32 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\header.component.ts" />
+    <TypeScriptCompile Include="app\polyfills.ts" />
+    <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dist\" />
-    <Folder Include="wwwroot\" />
+    <None Include="wwwroot\bootstrap.min.css" />
+    <None Include="wwwroot\content\css\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\content\css\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\content\css\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\content\css\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\content\css\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\content\css\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\content\css\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\content\css\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\content\css\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\content\css\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\content\css\main.css" />
+    <None Include="wwwroot\content\css\main.min.css" />
+    <None Include="wwwroot\content\css\main.scss" />
+    <None Include="wwwroot\content\css\vendor\font-awesome.min.css" />
+    <None Include="wwwroot\content\fav\favicon-16x16.png" />
+    <None Include="wwwroot\content\fav\favicon-32x32.png" />
+    <None Include="wwwroot\content\fav\favicon-96x96.png" />
+    <None Include="wwwroot\content\fav\favicon.ico" />
+    <None Include="wwwroot\content\img\profile.png" />
+    <None Include="wwwroot\content\img\profile1.jpg" />
+    <None Include="wwwroot\content\img\profile1.png" />
+    <None Include="wwwroot\content\img\profile2.jpg" />
   </ItemGroup>
 </Project>
