@@ -75,7 +75,7 @@
 								<span class="f3 d-block font-italic text-muted"><strong>{{exp.companyName}}</strong></span>
 							</a>
 						</div>
-						<div class="f3 work-ex-body pt-2 ta-justify" [innerHTML]="exp.jobDuties"></div>
+						<div class="f3 work-ex-body pt-2 ta-justify" [innerHTML]="exp.jobDuties | safeHtml"></div>
 					</div>
 				</div>
 			</div>

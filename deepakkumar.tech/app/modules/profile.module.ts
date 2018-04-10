@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MasterComponent } from '../components/master.component';
-import { HeaderComponent } from '../components/header.component';
+import { ProfileComponent } from '../components/profile/profile.component';
+import { HeaderComponent } from '../components/profile/header/header.component';
+import { SafeHtmlPipe } from '../pipes/safeHtml.pipe';
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [MasterComponent , HeaderComponent],
-    bootstrap: [MasterComponent ]
+    declarations: [ProfileComponent, HeaderComponent, SafeHtmlPipe],
+    bootstrap: [ProfileComponent ]
 })
 export class ProfileModule { }
