@@ -28,6 +28,11 @@
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\assests\css\vendor\font-awesome.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Target Name="AfterBuild">
     <Exec Condition="$(Configuration) == 'Debug'" Command="npm run buildDev" />
     <Exec Condition="$(Configuration) == 'Release'" Command="npm run buildProd" />
