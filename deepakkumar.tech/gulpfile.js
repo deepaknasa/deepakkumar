@@ -1,4 +1,4 @@
-/// <binding />
+/// <binding BeforeBuild='content' />
 "use strict";
 
 var gulp = require("gulp"),
@@ -9,20 +9,12 @@ var gulp = require("gulp"),
 
 var paths = {
     webroot: "./wwwroot/",
-    src: "app/content/"
+    src: "./app/"
 };
 
-paths.cssSrc = paths.src + "css/**/*.css";
-paths.cssDest = paths.webroot + "css/**/*.css";
+paths.srcFolder = paths.src + "assests/**/*";
+paths.destFolder = paths.webroot + "assests/";
 
-gulp.task("clean", ["clean:css"]);
-
-gulp.task("clean:css", function (cb) {
-    rimraf(paths.concatCssDest, cb);
-});
-
-gulp.task("css", function () {
-    return gulp.src([paths.cssSrc])
-        .pipe(concat(paths.cssDest))
-        .pipe(gulp.dest("."));
+gulp.task("content", function () {
+    return gulp.src([paths.srcFolder]).pipe(gulp.dest(paths.destFolder));
 });
