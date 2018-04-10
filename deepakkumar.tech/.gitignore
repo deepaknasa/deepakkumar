@@ -1,7 +1,9 @@
 .vs/
+../.vs/
 obj/
 bin/
 node_modules/
 wwwroot/
 web.config
 Properties/launchSettings.json
+azure-url.txt
