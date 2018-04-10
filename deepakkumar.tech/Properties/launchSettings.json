@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://dk.tech/",
+      "applicationUrl": "http://deepak.kumar/",
       "sslPort": 0
     },
     "iisExpress": {
@@ -28,8 +28,9 @@
       },
       "applicationUrl": "http://localhost:60028/"
     },
-    "newProfile1": {
-      "commandName": "IISExpress"
+    "IIS": {
+      "commandName": "IIS",
+      "workingDirectory": "D:\\Code\\Git\\deepakkumar\\deepakkumar.tech"
     }
   }
 }

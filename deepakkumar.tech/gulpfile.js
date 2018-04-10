@@ -12,8 +12,8 @@ var paths = {
     src: "./app/"
 };
 
-paths.srcFolder = paths.src + "assests/**/*";
-paths.destFolder = paths.webroot + "assests/";
+paths.srcFolder = paths.src + "assets/**/*";
+paths.destFolder = paths.webroot + "assets/";
 
 gulp.task("content", function () {
     return gulp.src([paths.srcFolder]).pipe(gulp.dest(paths.destFolder));

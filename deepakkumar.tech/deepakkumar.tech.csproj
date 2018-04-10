@@ -38,9 +38,6 @@
     <Content Update="wwwroot\assets\img\profile2.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\content\img\profile2.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Target Name="AfterBuild">
     <Exec Condition="$(Configuration) == 'Debug'" Command="npm run buildDev" />
