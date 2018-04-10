@@ -53,4 +53,8 @@
     <None Include="wwwroot\content\img\profile1.png" />
     <None Include="wwwroot\content\img\profile2.jpg" />
   </ItemGroup>
+  <Target Name="AfterBuild">
+    <Exec Condition="$(Configuration) == 'Debug'" Command="npm run buildDev" />
+    <Exec Condition="$(Configuration) == 'Release'" Command="npm run buildProd" />
+  </Target>
 </Project>
