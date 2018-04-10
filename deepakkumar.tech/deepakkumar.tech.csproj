@@ -29,8 +29,17 @@
     <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Update="wwwroot\assests\css\vendor\font-awesome.min.css">
+    <Content Update="wwwroot\app.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\css\vendor\font-awesome.min.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\img\profile2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\content\img\profile2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Target Name="AfterBuild">
