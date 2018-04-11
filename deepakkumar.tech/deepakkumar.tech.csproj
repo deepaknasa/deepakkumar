@@ -13,6 +13,7 @@
     <Compile Remove="DocumentDBRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="app\pipes\safeHtml.pipe.ts" />
     <None Remove="app\polyfills.ts" />
     <None Remove="app\styles.ts" />
   </ItemGroup>
@@ -25,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\profile\header\header.component.ts" />
+    <TypeScriptCompile Include="app\pipes\safeHtml.pipe.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>

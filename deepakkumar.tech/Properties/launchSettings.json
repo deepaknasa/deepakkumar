@@ -21,8 +21,7 @@
     },
     "deepakkumar.tech": {
       "commandName": "IIS",
-      "workingDirectory": "C:\\Code\\Git\\deepakkumar.tech\\deepakkumar.tech",
-      "launchBrowser": true,
+      "workingDirectory": "C:\\Code\\Git\\deepakkumar\\deepakkumar.tech",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

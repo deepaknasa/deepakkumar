@@ -218,6 +218,14 @@ body {
                     .work-ex-heading {
                         line-height: 1.2em;
                     }
+
+                    a.show-more:before {
+                        content: "show less";
+                    }
+
+                    a.show-more.collapsed:before {
+                        content: "show more";
+                    }
                 }
             }
         }

@@ -156,6 +156,6 @@ export class ProfileComponent {
 									</p>
 									<p>Optimized the old WCF service code by adding few ServiceBehaviors to reduce the line of codes by almost 50%, improved the Maintainability Index and reduced the cyclomatic complexity. Helped Managers to give estimates for their new pitches. Used LESS Cruncher tool to create the final minified CSS files. Created PDF generator to publish weekly reports to higher stakeholders, this tool reduces the human efforts by 75%.</p>
 								</div>
-								<a class="show-more secondary-text fl-right" data-toggle="collapse" href="#collapseEx" aria-expanded="false" aria-controls="collapseEx">show more</a>`
+								<a class="show-more secondary-text fl-right" data-toggle="collapse" href="#collapseEx" aria-expanded="false" aria-controls="collapseEx"></a>`
     }];
 }

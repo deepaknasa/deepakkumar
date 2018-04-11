@@ -131,6 +131,10 @@
             font-size: 0.5em !important; }
           body .work-ex .right-panel-section .work-ex-items .work-ex-item .work-ex-heading {
             line-height: 1.2em; }
+          body .work-ex .right-panel-section .work-ex-items .work-ex-item a.show-more:before {
+            content: "show less"; }
+          body .work-ex .right-panel-section .work-ex-items .work-ex-item a.show-more.collapsed:before {
+            content: "show more"; }
 
 @media only screen and (max-width: 360px) {
   body {
