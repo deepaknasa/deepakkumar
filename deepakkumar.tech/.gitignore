@@ -5,5 +5,5 @@ bin/
 node_modules/
 wwwroot/
 web.config
-Properties/launchSettings.json
+Properties/
 azure-url.txt
