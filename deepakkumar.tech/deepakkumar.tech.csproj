@@ -13,6 +13,9 @@
     <Compile Remove="DocumentDBRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="web.config" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="app\pipes\safeHtml.pipe.ts" />
     <None Remove="app\polyfills.ts" />
     <None Remove="app\styles.ts" />
@@ -23,6 +26,9 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\profile\header\header.component.ts" />
