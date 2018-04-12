@@ -1,9 +1,5 @@
-﻿import 'core-js/es6/reflect';
+import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 import 'jquery';
 import 'bootstrap';
-//import 'jquery';
-//import './custom/vendor/jquery-slim.min.js';
-//import './custom/vendor/popper.min.js';
-//import './custom/vendor/bootstrap.min.js';

@@ -16,8 +16,10 @@
     <Content Remove="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="app\models\profile\profile.model.ts" />
     <None Remove="app\pipes\safeHtml.pipe.ts" />
     <None Remove="app\polyfills.ts" />
+    <None Remove="app\services\profile\profile.service.ts" />
     <None Remove="app\styles.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -32,8 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\profile\header\header.component.ts" />
+    <TypeScriptCompile Include="app\models\profile\profile.model.ts" />
     <TypeScriptCompile Include="app\pipes\safeHtml.pipe.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
+    <TypeScriptCompile Include="app\services\profile\profile.service.ts" />
     <TypeScriptCompile Include="app\styles.ts" />
   </ItemGroup>
   <ItemGroup>

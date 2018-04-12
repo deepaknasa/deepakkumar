@@ -5,7 +5,11 @@ const webpack = require('webpack');
 module.exports = {
     stats: { warnings: false },
     mode: 'development',
-    entry: ['./app/polyfills.js', './app/styles.js', './app/main.js'],
+    entry: [
+      'webpack-dev-server/client?http://' + require("os").hostname() + ':9090/',
+      './app/polyfills.js',
+      './app/styles.js',
+      './app/main.js'],
     module: {
         rules: [
             {
@@ -26,6 +30,10 @@ module.exports = {
             "node_modules"
         ]
     },
+    devServer: {
+      contentBase: './',
+      hot: true
+    },
     plugins: [
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core/,
@@ -37,7 +45,9 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
             Popper: ['popper.js', 'default']
-        })],
+        }),
+        new webpack.NamedModulesPlugin()
+    ],
     output: {
         path: path.resolve(__dirname, 'wwwroot'),
         filename: 'app.js'

@@ -10,23 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var profile_service_1 = require("../../services/profile/profile.service");
-var ProfileComponent = /** @class */ (function () {
-    function ProfileComponent(profileSvc) {
-        this.profileSvc = profileSvc;
+var platform_browser_1 = require("@angular/platform-browser");
+var SafeHtmlPipe = /** @class */ (function () {
+    function SafeHtmlPipe(sanitized) {
+        this.sanitized = sanitized;
     }
-    ProfileComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.profileSvc.getSkills().subscribe(function (data) { return _this.profileData = data; });
+    SafeHtmlPipe.prototype.transform = function (value) {
+        return this.sanitized.bypassSecurityTrustHtml(value);
     };
-    ProfileComponent = __decorate([
-        core_1.Component({
-            selector: 'profile',
-            template: require("./profile.component.html"),
-        }),
-        __metadata("design:paramtypes", [profile_service_1.ProfileService])
-    ], ProfileComponent);
-    return ProfileComponent;
+    SafeHtmlPipe = __decorate([
+        core_1.Pipe({ name: 'safeHtml' }),
+        __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
+    ], SafeHtmlPipe);
+    return SafeHtmlPipe;
 }());
-exports.ProfileComponent = ProfileComponent;
-//# sourceMappingURL=profile.component.js.map
+exports.SafeHtmlPipe = SafeHtmlPipe;
+//# sourceMappingURL=safeHtml.pipe.js.map
