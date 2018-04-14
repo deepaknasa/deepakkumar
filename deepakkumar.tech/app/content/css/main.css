@@ -1,12 +1,32 @@
 ﻿body {
-  max-width: 786px;
-  background-color: #caccd1;
-  box-shadow: -30px 30px 70px #414142;
-  margin-bottom: 2em;
-  font-size: 16px !important;
-  font-family: 'Roboto', sans-serif; }
+  /* Safari */
+  background-color: #caccd1; }
   body #primaryImg {
     content: url(/assets/img/profile2.jpg); }
+  body .loading-container {
+    text-align: center;
+    margin-top: 250px; }
+  body .loader {
+    display: inline-block;
+    border: 0px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 1px solid black;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
   body a {
     text-decoration: none !important; }
   body .f1 {
@@ -135,6 +155,14 @@
             content: "show less"; }
           body .work-ex .right-panel-section .work-ex-items .work-ex-item a.show-more.collapsed:before {
             content: "show more"; }
+
+.profile-container {
+  margin: 0 auto;
+  max-width: 786px;
+  box-shadow: -30px 30px 70px #414142;
+  margin-bottom: 2em;
+  font-size: 16px !important;
+  font-family: 'Roboto', sans-serif; }
 
 @media only screen and (max-width: 360px) {
   body {

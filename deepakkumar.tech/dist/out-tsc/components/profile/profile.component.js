@@ -14,10 +14,14 @@ var profile_service_1 = require("../../services/profile/profile.service");
 var ProfileComponent = /** @class */ (function () {
     function ProfileComponent(profileSvc) {
         this.profileSvc = profileSvc;
+        this.loading = true;
     }
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.profileSvc.getSkills().subscribe(function (data) { return _this.profileData = data; });
+        this.profileSvc.getSkills().subscribe(function (data) {
+            _this.profileData = data;
+            _this.loading = false;
+        });
     };
     ProfileComponent = __decorate([
         core_1.Component({

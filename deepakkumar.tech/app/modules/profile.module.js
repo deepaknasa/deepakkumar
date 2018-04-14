@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/common/http");
 var profile_component_1 = require("../components/profile/profile.component");
 var header_component_1 = require("../components/profile/header/header.component");
 var safeHtml_pipe_1 = require("../pipes/safeHtml.pipe");
@@ -17,7 +18,7 @@ var ProfileModule = /** @class */ (function () {
     }
     ProfileModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpClientModule],
             declarations: [profile_component_1.ProfileComponent, header_component_1.HeaderComponent, safeHtml_pipe_1.SafeHtmlPipe],
             bootstrap: [profile_component_1.ProfileComponent],
             providers: [profile_service_1.ProfileService]

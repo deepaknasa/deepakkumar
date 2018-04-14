@@ -7,9 +7,13 @@ import { ProfileService } from '../../services/profile/profile.service';
 })
 export class ProfileComponent {
   profileData: ProfileData;
+  public loading: boolean = true;
   constructor(private profileSvc: ProfileService) { }
 
   ngOnInit() {
-    this.profileSvc.getSkills().subscribe(data => this.profileData = data);
+    this.profileSvc.getSkills().subscribe(data => {
+      this.profileData = data;
+      this.loading = false;
+    });
   }
 }
