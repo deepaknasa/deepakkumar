@@ -6,7 +6,6 @@ module.exports = {
     stats: { warnings: false },
     mode: 'development',
     entry: [
-      'webpack-dev-server/client?http://' + require("os").hostname() + ':9090/',
       './app/polyfills.js',
       './app/styles.js',
       './app/main.js'],
