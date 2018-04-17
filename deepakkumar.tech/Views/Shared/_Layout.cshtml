@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @{
+      var hostUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
+  }
+  <title>www.deepakkumar.tech</title>
+  <link rel="icon" href="@hostUrl/assets/fav/favicon.ico?v=1" type="image/x-icon">
+  <link rel="shortcut icon" href="@hostUrl/assets/fav/favicon.ico?v=1" type="image/x-icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="~/" />
+
+  <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/assets/css/vendor/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+<body class="mx-auto">
+  @RenderBody()
+  <script src="~/dist/polyfills.js" asp-append-version="true"></script>
+  @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿.f1 {
+  font-size: 1.7em !important; }
+
+.f2 {
+  font-size: 1em !important;
+  font-weight: 600; }
+
+.f3 {
+  font-size: 0.8em !important; }
+
+.f4 {
+  font-size: 0.7em !important; }
+
+.fl-right {
+  float: right; }
+
+.transform-upper {
+  text-transform: uppercase; }
+
+.letter-spacing {
+  letter-spacing: 0.3em; }
+
+.secondary-text {
+  color: #a7acb7; }
+
+.ta-left {
+  text-align: left; }
+
+.ta-center {
+  text-align: center; }
+
+.ta-justify {
+  text-align: justify; }
+
+#primaryImg {
+  content: url(/assets/img/profile2.jpg); }
+
+.heading-img {
+  width: 150px;
+  height: 150px; }
+
+.transform-upper {
+  text-transform: uppercase; }
+
+.letter-spacing {
+  letter-spacing: 0.3em; }
+
+.secondary-text {
+  color: #a7acb7; }
+
+.ta-left {
+  text-align: left; }
+
+.ta-center {
+  text-align: center; }
+
+.ta-justify {
+  text-align: justify; }
+
+nav.navbar {
+  background-color: #383a3d; }
+  nav.navbar .navbar-container {
+    font: sans-serif;
+    text-align: center;
+    color: white; }
+    nav.navbar .navbar-container .navbar-brand {
+      background-color: #383a3d; }
+    nav.navbar .navbar-container .navbar-brand-title {
+      border-color: #a7acb7 !important; }
+      nav.navbar .navbar-container .navbar-brand-title .brand-title-primary {
+        /*font-size: 1.8em;*/
+        display: block;
+        line-height: 1.2em; }
+      nav.navbar .navbar-container .navbar-brand-title .brand-title-secondary {
+        line-height: 1.2em; }
+

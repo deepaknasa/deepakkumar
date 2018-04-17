@@ -1,0 +1,109 @@
+$img-path: '/assets/img';
+
+.f1 {
+  font-size: 1.7em !important;
+}
+
+.f2 {
+  font-size: 1em !important;
+  font-weight: 600;
+}
+
+.f3 {
+  font-size: 0.8em !important;
+}
+
+.f4 {
+  font-size: 0.7em !important;
+}
+
+.fl-right {
+  float: right;
+}
+
+.transform-upper {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: 0.3em;
+}
+
+.secondary-text {
+  color: #a7acb7;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-justify {
+  text-align: justify;
+}
+
+#primaryImg {
+  content: url(#{$img-path}/profile2.jpg);
+}
+
+.heading-img {
+  width: 150px;
+  height: 150px;
+}
+
+.transform-upper {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: 0.3em;
+}
+
+.secondary-text {
+  color: #a7acb7;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-justify {
+  text-align: justify;
+}
+
+nav.navbar {
+  background-color: #383a3d;
+
+  .navbar-container {
+    font: sans-serif;
+    text-align: center;
+    color: white;
+
+    .navbar-brand {
+      background-color: #383a3d;
+    }
+
+    .navbar-brand-title {
+      border-color: #a7acb7 !important;
+
+      .brand-title-primary {
+        /*font-size: 1.8em;*/
+        display: block;
+        line-height: 1.2em;
+      }
+
+      .brand-title-secondary {
+        line-height: 1.2em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) { }

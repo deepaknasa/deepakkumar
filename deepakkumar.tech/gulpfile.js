@@ -9,7 +9,7 @@ var gulp = require("gulp"),
 
 var paths = {
     webroot: "./wwwroot/",
-    src: "./app/"
+    src: "./ClientApp/app"
 };
 
 paths.srcFolder = paths.src + "assets/**/*";

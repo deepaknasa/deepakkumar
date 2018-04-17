@@ -2,5 +2,21 @@
   {
     "outputFile": "app/content/css/main.css",
     "inputFile": "app/content/css/main.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/profile/profile.component.css",
+    "inputFile": "ClientApp/app/components/profile/profile.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/profile/header/header.component.css",
+    "inputFile": "ClientApp/app/components/profile/header/header.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/profile/components/profile.component.css",
+    "inputFile": "ClientApp/profile/components/profile.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/profile/components/header/header.component.css",
+    "inputFile": "ClientApp/profile/components/header/header.component.scss"
   }
 ]

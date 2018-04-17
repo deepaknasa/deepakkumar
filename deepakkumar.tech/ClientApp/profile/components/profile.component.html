@@ -1,0 +1,121 @@
+<div *ngIf="loading" class="loading-container">
+  <div class="loader"></div>
+</div>
+<div *ngIf="!loading" class="profile-container">
+  <profile-header></profile-header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5 bg-color1 pt-5">
+        <div class="col-12 px-sm-5 px-3 left-panel-section">
+          <span class="f2 ta-center main-heading transform-upper letter-spacing">About Me</span>
+          <div class="f3 intro-tab-content">
+            <span class="px-0 ta-justify intro-text d-block" [innerHTML]="profileData.aboutMe" title="{{profileData.aboutMe}}"></span>
+          </div>
+        </div>
+        <hr class="d-sm-none">
+        <div class="col-12 social-tab px-5 left-panel-section">
+          <span class="f2 ta-center main-heading transform-upper letter-spacing">Social</span>
+          <ul class="f3 list-unstyled offset-1 col-10 offset-sm-0 col-sm-12">
+            <li *ngFor="let social of profileData.socialMediaLinks" class="pl-3 py-2 social-tab-item">
+              <a target="_blank"
+                 href="{{social.profileLink}}"
+                 class="social-link"
+                 title="">
+                <i class="fa border-icon" [ngClass]="social.icon"></i> / {{social.userName}}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <hr class="d-sm-none">
+        <div class="col-12 social-tab px-5 left-panel-section">
+          <span class="f2 ta-center main-heading transform-upper letter-spacing">Resume</span>
+          <div class="row">
+            <div class="col-4 pb-2" [ngClass]="{'offset-2': first}" *ngFor="let resume of profileData.resumeLinks; let first = first">
+              <a target="_blank" href="{{resume.resumePath}}" title="">
+                <div class="resume-icon">
+                  <i class="fa" [ngClass]="resume.icon"></i>
+                  <span class="f3">{{resume.text}}</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="d-sm-none">
+        <div class="col-12 work-skills px-5 left-panel-section">
+          <span class="f2 ta-center main-heading transform-upper letter-spacing">Work Skills</span>
+          <div class="f3 intro-tab-content skillTemplate">
+            <div class="row1" *ngFor="let skill of profileData.skills">
+              <span class="pl-2 skill-name">{{skill.name}}</span>
+              <ul class="skill-dots pr-0 my-0 skill-level">
+                <li *ngFor="let level of [1,2,3,4,5,6,7,8,9,10]"><i [ngClass]="{'fa-circle' : skill.level >= level, 'fa-circle-o': skill.level < level}" class="fa fa-circle" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="d-sm-none">
+        <div class="col-12 hobbies-tab px-5 pb-5 left-panel-section">
+          <span class="f2 ta-center main-heading transform-upper letter-spacing">Interests</span>
+          <div class="row f3">
+            <div class="col-4 pb-2" *ngFor="let hobby of profileData.hobbies">
+              <div class="hobby-icon">
+                <i class="fa {{hobby.icon}}"></i>
+                <span class="f3">{{hobby.name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7 work-ex pt-5">
+        <div class="ta-left col-12 pl-3 pl-sm-5 right-panel-section">
+          <span class="f2 main-heading transform-upper letter-spacing right-side-heading">Work Experience</span>
+          <div class="work-ex-items pl-4">
+            <div class="work-ex-item" *ngFor="let exp of profileData.workEx">
+              <span class="timeline-bubble secondary-text">
+                <i class="fa fa-circle d-inline"></i>
+              </span>
+              <div class="work-ex-heading">
+                <span class="f2 d-block">{{exp.title}} | {{exp.period}}</span>
+                <a target="_blank" href="{{exp.companyUrl}}" title="">
+                  <span class="f3 d-block font-italic text-muted"><strong>{{exp.companyName}}</strong></span>
+                </a>
+              </div>
+              <div class="f3 work-ex-body pt-2 ta-justify" [innerHTML]="exp.jobDuties | safeHtml"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="ta-left col-12 pl-3 pl-sm-5 right-panel-section">
+          <span class="f2 main-heading transform-upper letter-spacing right-side-heading">Education</span>
+          <div class="work-ex-items pl-4">
+            <div class="work-ex-item" *ngFor="let degree of profileData.education">
+              <span class="timeline-bubble secondary-text">
+                <i class="fa fa-circle d-inline"></i>
+              </span>
+              <div class="work-ex-heading">
+                <span class="f2 d-block">{{degree.uni}}</span>
+                <span class="f3 d-block font-italic text-muted"><strong>{{degree.degree}}</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="ta-left col-12 pl-3 pl-sm-5 right-panel-section">
+          <span class="f2 main-heading transform-upper letter-spacing right-side-heading">Certifications</span>
+          <div class="work-ex-items pl-4">
+            <div class="work-ex-item" *ngFor="let certificate of profileData.certificates">
+              <span class="timeline-bubble secondary-text">
+                <i class="fa fa-circle d-inline"></i>
+              </span>
+              <div class="work-ex-heading">
+                <span class="f2 d-block">{{certificate.name}}</span>
+                <span class="f3 d-block font-italic text-muted"><strong>{{certificate.desc}}</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /container -->
+</div>

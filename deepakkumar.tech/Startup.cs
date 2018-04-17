@@ -12,6 +12,7 @@ using Autofac;
 using deepakkumar.tech.Services;
 using Autofac.Extensions.DependencyInjection;
 using deepakkumar.tech.Models.Profile;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace deepakkumar.tech
 {
@@ -52,7 +53,10 @@ namespace deepakkumar.tech
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
-        app.UseBrowserLink();
+        app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+        {
+          HotModuleReplacement = true
+        });
       }
       else
       {
@@ -61,7 +65,21 @@ namespace deepakkumar.tech
 
       app.UseStaticFiles();
 
-      app.UseMvc();
+      //app.UseMvc();
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+            name: "webapi",
+            template: "api/{controller=Home}/{action=Index}/{id?}");
+
+        routes.MapRoute(
+            name: "default",
+            template: "{controller=Home}/{action=Index}/{id?}");
+
+        routes.MapSpaFallbackRoute(
+            name: "spa-fallback",
+            defaults: new { controller = "Home", action = "Index" });
+      });
       DocumentDBRepository<ProfileData>.Initialize(this.Configuration);
       applicationLifetime.ApplicationStopped.Register(() => this.ApplicationContainer.Dispose());
     }
