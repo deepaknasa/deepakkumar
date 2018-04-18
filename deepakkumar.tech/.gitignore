@@ -8,3 +8,4 @@ web.config
 Properties/
 azure-url.txt
 appsettings.Production.json
+ClientApp/
